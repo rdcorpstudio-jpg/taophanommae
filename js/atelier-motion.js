@@ -35,8 +35,17 @@
   }
 
   const mobile=matchMedia("(max-width:980px)").matches;
-  document.body.classList.add("atelier-motion","motion-ready");
-  if(!mobile) document.body.classList.add("atelier-grand");
+  // Apply motion classes ASAP so hero entrance animations start on first paint after script
+  document.documentElement.classList.add("motion-boot");
+  document.body.classList.add("atelier-motion","motion-ready","atelier-grand");
+  // Restart hero animations cleanly once classes are present
+  requestAnimationFrame(()=>{
+    document.querySelectorAll(".hero-editorial .hero-visual, .hero-editorial .product-upload, .hero-copy > *").forEach(el=>{
+      el.style.animation="none";
+      void el.offsetWidth;
+      el.style.animation="";
+    });
+  });
 
   const io=new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
@@ -44,11 +53,11 @@
       const el=entry.target;
       const siblings=[...el.parentElement?.children||[]].filter(n=>nodes.includes(n));
       const i=Math.max(0,siblings.indexOf(el));
-      el.style.setProperty("--atelier-delay",`${Math.min(i*(mobile?60:140),mobile?240:560)}ms`);
+      el.style.setProperty("--atelier-delay",`${Math.min(i*(mobile?80:140),mobile?320:560)}ms`);
       el.classList.add("atelier-in","in-view");
       io.unobserve(el);
     });
-  },{threshold:mobile?0.02:0.08,rootMargin:mobile?"0px 0px -4% 0px":"0px 0px -10% 0px"});
+  },{threshold:0.08,rootMargin:mobile?"0px 0px -8% 0px":"0px 0px -10% 0px"});
 
   nodes.forEach((el,idx)=>{
     el.classList.add("atelier-reveal");

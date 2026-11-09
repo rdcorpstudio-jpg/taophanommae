@@ -1,6 +1,9 @@
 /* Ingredients: airy reference-inspired carousel; original content and evidence unchanged. */
 .ingredient-carousel{--car-gap:22px;--car-visible:5;position:relative;margin-top:25px;padding:10px 0 0}
-.ingredient-viewport{width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;-ms-overflow-style:none;scroll-snap-type:x mandatory;scroll-padding-inline:4px;outline:none;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
+.ingredient-viewport{width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior:auto;scrollbar-width:none;-ms-overflow-style:none;scroll-snap-type:x mandatory;scroll-padding-inline:4px;outline:none;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+@media(min-width:901px){
+  .ingredient-viewport{touch-action:pan-x pan-y;overscroll-behavior-x:contain}
+}
 .ingredient-viewport::-webkit-scrollbar{display:none;width:0;height:0}
 .ingredient-viewport:focus-visible{outline:3px solid #d0a129;outline-offset:5px;border-radius:18px}
 .ingredient-track{display:flex;align-items:stretch;gap:var(--car-gap);padding:4px 4px 16px}
