@@ -1,0 +1,13 @@
+# Local / deploy
+.vercel
+.env
+.env.*
+.env.local
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+_tmp_*
+
+# Backup duplicate (keep live index.html only)
+เต่าพนมมือ ใหม่ล่าสุด.html
