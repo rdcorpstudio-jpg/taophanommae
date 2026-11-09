@@ -15,10 +15,10 @@
 .ingredient-circle .media-edit{top:5px;right:6px;z-index:5;transform:translateY(0)}
 .ingredient-circle:not(.has-image){background:#eff2e8!important;overflow:hidden}
 .ingredient-circle:not(.has-image)::before{content:'✧';display:grid;place-items:center;height:100%;color:#c9ad55;font-size:64px}
-.ingredient-index{display:inline-block;color:#bd9125;font:700 10px/1.5 Arial,sans-serif;letter-spacing:.13em;margin-bottom:7px}
+.ingredient-index{display:inline-block;color:#bd9125;font:700 12px/1.5 Arial,sans-serif;letter-spacing:.1em;margin-bottom:7px}
 .ingredient-slide h3{font-size:17px;font-weight:750;line-height:1.35;margin:0 0 3px;color:#174233}
-.ingredient-english{font:11px/1.55 Arial,sans-serif;letter-spacing:.015em;color:#6e8170;margin:0}
-.ingredient-caption{font-size:11px;line-height:1.5;color:#72826d;margin:7px 0 0}
+.ingredient-english{font:14px/1.55 Arial,sans-serif;letter-spacing:.01em;color:#4f5f52;margin:0}
+.ingredient-caption{font-size:14px;line-height:1.55;color:#4f5f52;margin:7px 0 0}
 .ingredient-arrow{position:absolute;z-index:6;top:calc(min(10vw,104px) - 2px);display:grid;place-items:center;width:46px;height:46px;border:1px solid #e4dfcf;border-radius:50%;background:#fff;color:#184835;box-shadow:0 5px 19px rgba(34,56,35,.14);cursor:pointer;transition:transform .22s,background .22s,border-color .22s,opacity .22s}
 .ingredient-prev{left:-23px}.ingredient-next{right:-23px}
 .ingredient-arrow svg{width:20px;height:20px}
@@ -26,8 +26,8 @@
 .ingredient-arrow:focus-visible{outline:3px solid #d2a631;outline-offset:3px}
 .ingredient-arrow:disabled{opacity:.38;cursor:not-allowed;box-shadow:0 3px 10px #264e2b12}
 .ingredient-carousel-footer{display:flex;align-items:center;justify-content:center;gap:15px;margin-top:7px;min-height:34px}
-.ingredient-count{color:#aa8224;font:700 11px/1.2 Arial,sans-serif;letter-spacing:.08em;font-variant-numeric:tabular-nums}
-.ingredient-hint{font-size:11px;color:#71836c}
+.ingredient-count{color:#aa8224;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.ingredient-hint{font-size:14px;color:#4f5f52}
 .ingredient-meter{width:112px;height:4px;border-radius:8px;background:#dbe5d3;overflow:hidden}
 .ingredient-meter span{display:block;width:45.45%;height:100%;border-radius:8px;background:linear-gradient(90deg,#e5c254,#b78a16);transition:width .25s ease}
 @media(min-width:1500px){.ingredient-arrow{top:107px}}
@@ -39,15 +39,15 @@
   .ingredient-slide{flex-basis:calc((100% - var(--car-gap))/2);padding-bottom:0}
   .ingredient-arrow{top:calc(min(22vw,96px) - 2px);width:36px;height:36px;box-shadow:0 4px 12px rgba(18,38,28,.12)}
   .ingredient-prev{left:-4px}.ingredient-next{right:-4px}
-  .ingredient-slide h3{font-size:14px;margin-bottom:2px}
+  .ingredient-slide h3{font-size:15px;margin-bottom:2px}
   .ingredient-circle{width:min(100%,168px);margin-bottom:8px;filter:none}
-  .ingredient-index{margin-bottom:4px;font-size:9px}
-  .ingredient-english{font-size:10px}
-  .ingredient-caption{font-size:10px;margin-top:3px}
+  .ingredient-index{margin-bottom:4px;font-size:11px}
+  .ingredient-english{font-size:13px}
+  .ingredient-caption{font-size:13px;margin-top:3px}
   .ingredient-carousel-footer{gap:8px;flex-wrap:wrap;margin-top:4px}
   .ingredient-meter{width:72px}
 }
-@media(max-width:359px){.ingredient-carousel{--car-visible:1}.ingredient-slide{flex-basis:100%}.ingredient-circle{width:190px}.ingredient-arrow{top:77px}.ingredient-hint{font-size:10px}}
+@media(max-width:359px){.ingredient-carousel{--car-visible:1}.ingredient-slide{flex-basis:100%}.ingredient-circle{width:190px}.ingredient-arrow{top:77px}.ingredient-hint{font-size:13px}}
 body:not(.editing) .ingredient-circle .media-edit{opacity:0!important;pointer-events:none!important}
 body.editing .ingredient-circle .media-edit{opacity:1!important;pointer-events:auto!important}
 @media(hover:hover){body:not(.editing) .ingredient-circle:hover .media-edit{opacity:1!important;pointer-events:auto!important}}

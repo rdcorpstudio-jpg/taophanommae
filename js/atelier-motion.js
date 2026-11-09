@@ -20,7 +20,6 @@
     "#order .callback-copy",
     "#order .callback-card",
     "#references .wrap",
-    "#references .source-date",
     ".footer-hero",
     ".footer-notice",
     ".footer-bottom"
@@ -34,7 +33,7 @@
     return;
   }
 
-  const mobile=matchMedia("(max-width:980px)").matches;
+  const mobile=matchMedia("(max-width:1280px)").matches;
   // Apply motion classes ASAP so hero entrance animations start on first paint after script
   document.documentElement.classList.add("motion-boot");
   document.body.classList.add("atelier-motion","motion-ready","atelier-grand");
